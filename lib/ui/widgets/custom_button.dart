@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
-import 'package:wpay/constants/colors.dart';
 import 'package:wpay/constants/size_config.dart';
 
 class CustomButton extends StatelessWidget {
   final String text;
   final Function() onTap;
-  const CustomButton({Key? key, required this.text, required this.onTap})
+  final Color color;
+  const CustomButton({Key? key, required this.text, required this.onTap,required this.color})
       : super(key: key);
 
   @override
@@ -13,9 +13,9 @@ class CustomButton extends StatelessWidget {
     return InkWell(
       onTap: onTap,
       child: Container(
-          decoration: const BoxDecoration(
-              color: customButtonColor,
-              borderRadius: BorderRadius.all(
+          decoration:  BoxDecoration(
+              color: color,
+              borderRadius: const BorderRadius.all(
                 Radius.circular(20),
               )),
           margin: const EdgeInsets.all(10),

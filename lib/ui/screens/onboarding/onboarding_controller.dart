@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:wpay/models/onboarding_model.dart';
-import 'package:wpay/ui/screens/auth/sign_in/sign_in.dart';
+import 'package:wpay/ui/screens/auth/auth.dart';
 
 class OnboardingController extends GetxController {
   var selectedPageindex = 0.obs;
@@ -21,7 +21,7 @@ class OnboardingController extends GetxController {
     pageController.nextPage(duration: 300.milliseconds, curve: Curves.easeIn);
   }
 
-  navigateToSignIn() {
-    Get.to(const SignIn());
+  navigateToAuthScreen() {
+    Get.to(const Auth());
   }
 }

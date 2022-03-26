@@ -31,7 +31,7 @@ class Onboarding extends StatelessWidget {
                               top: SizeConfig.fromHeight(context, 12),
                               left: SizeConfig.fromWidth(context, 90),
                               child: InkWell(
-                                onTap: controller.navigateToSignIn,
+                                onTap: controller.navigateToAuthScreen,
                                 child: const Text("Skip",
                                     style: TextStyle(color: Colors.white)),
                               )),
@@ -105,8 +105,9 @@ class Onboarding extends StatelessWidget {
                                                 SizeConfig.fontSize(context, 3),
                                           )),
                                       Obx(() => CustomButton(
+                                          color: customButtonColor,
                                           onTap: controller.isLastPage
-                                              ? controller.navigateToSignIn
+                                              ? controller.navigateToAuthScreen
                                               : controller.nextSlide,
                                           text: controller.isLastPage
                                               ? 'Get Started'
